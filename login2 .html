@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AFTER LOGIN</title>
+<style type="text/css">
+*{
+padding:0px;
+margin:0px;
+}
+body {
+box-sizing:border-box;
+width:100vw;
+background-color:#FFE186;
+
+}
+#heading {
+width:80vw;
+height:60px;
+border-style:solid;
+border-color:red;
+border-width:3px;
+background-color:rgba(255,255,255,0.6);
+display:flex;
+margin: 8px auto;
+border-radius:10px;
+overflow:hidden;
+margin-bottom:30px;
+}
+
+#text{
+width:100%;
+background-color:rgba(0,0,255,0.8);
+text-align:center;
+text-transform:;
+font-size:35px;
+font-weight:bold;
+font-family:monospace;
+display:flex;
+justify-content:center;
+align-items:center;
+letter-spacing:1px;
+color:white;
+}
+
+#table0 {
+border-collapse:collapse;
+margin:auto;
+background-color:lightblue;
+}
+
+#th0{
+border:2px solid blue;
+width:80vw;
+border-radius:20px;
+background-color:red;
+color:white;
+font-size:25px;
+padding:5px;
+
+}
+.tr0{
+
+}
+.tr0 td {
+width:50%;
+border:2px solid blue;
+height:30px;
+text-align:center;
+font-weight:bold;
+font-family:Courier new,monospace;
+padding:5px;
+font-size:20px;
+
+}
+.td00{
+color:red;
+
+}
+#logout {
+width:80%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(255,0,0,0.6);
+color:white;
+font-family:Courier new,monospace;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+margin:auto;
+padding:5px;
+margin-top:10px;
+border-radius:10px;
+}
+#logout:active {
+background-color:red;
+
+}
+
+
+</style>
+</head>
+<body>
+<!-- Heading -->
+<div id="heading">
+	<div id="text">
+		<p>Calculate Your Reciept</p>
+	</div>		
+</div>
+ 	
+<!--Table Which Show Your Details-->
+<table id="table0">
+<th colspan="2" id = "th0">YOUR DETAILS</th>
+<tr id="tr01" class="tr0"><td class="td00" >NAME</td><td id="td01"></td></tr>
+<tr id="tr02" class="tr0"><td class="td00">DOB</td><td id="td02"></td></tr>
+<tr id="tr03" class="tr0"><td class="td00">MOBILE</td><td id="td03"></td></tr>
+<tr id="tr04" class="tr0"><td class="td00">EMAIL ID</td><td id="td04"></td></tr>
+<tr id="tr05" class="tr0"><td class="td00">PASSWORD</td><td id="td05"></td></tr>
+</table>
+
+<div id="logout">LOGOUT...</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var abj = localStorage.getItem("code");
+if(abj=="secrete"){
+var getname = localStorage.getItem("name");
+var getdob = localStorage.getItem("dob");
+var getmobile = localStorage.getItem("mobile");
+var getemail = localStorage.getItem("email");
+var getpass = localStorage.getItem("password");
+
+
+document.getElementById("td01").innerHTML = getname ;
+document.getElementById("td02").innerHTML = getdob ;
+document.getElementById("td03").innerHTML = getmobile;
+document.getElementById("td04").innerHTML = getemail ;
+document.getElementById("td05").innerHTML = getpass;
+}else{
+//window.location.href = "";
+
+}
+document.getElementById("logout").addEventListener("click", logf);
+function logf(){
+document.getElementById("td01").innerHTML = "" ;
+document.getElementById("td02").innerHTML = "" ;
+document.getElementById("td03").innerHTML = "";
+document.getElementById("td04").innerHTML = "" ;
+document.getElementById("td05").innerHTML = "";
+
+localStorage.setItem("code","exp");
+window.location.href  = "/internalstorage/login2.html";
+
+}
+
+
+
+</script>
+</body>
+</html>

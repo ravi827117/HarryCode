@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LogIn</title>
+<style type="text/css">
+*{
+padding:0px;
+margin:0px;
+}
+body {
+box-sizing:border-box;
+width:100vw;
+background-color:#FFE186;
+
+}
+#heading {
+width:80vw;
+height:60px;
+border-style:solid;
+border-color:red;
+border-width:3px;
+background-color:rgba(255,255,255,0.6);
+display:flex;
+margin: 8px auto;
+border-radius:10px;
+overflow:hidden;
+margin-bottom:30px;
+}
+
+#text{
+width:100%;
+background-color:rgba(0,0,255,0.8);
+text-align:center;
+text-transform:;
+font-size:35px;
+font-weight:bold;
+font-family:monospace;
+display:flex;
+justify-content:center;
+align-items:center;
+letter-spacing:1px;
+color:white;
+
+}
+
+#signup{
+width:80vw;
+height:;
+border-style:solid;
+border-color:green;
+border-width:1px;
+background-color:rgba(255,255,255,0.6);
+display:flex;
+margin: 8px auto;
+border-radius:10px;
+overflow:hidden;
+display:flex;
+position:;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+padding-bottom:35px;
+background-color:lightblue;
+padding-top:15px;
+margin-bottom:30px;
+
+}
+#legend {
+color:red;
+font-family:Courier new,monospace;
+font-size:30px;
+font-weight:bold;
+}
+.input{
+width:80%;
+margin:auto;
+height:30px;
+margin-top:10px;
+outline:none;
+border:1px solid blue;
+border-radius:10px;
+text-align:center;
+font-size:20px;
+font-family:Courier new,monospace;
+font-weight:bold;
+}
+#button {
+width:80%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(255,0,0,0.6);
+color:white;
+font-family:Courier new,monospace;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+}
+#button:active {
+background-color:red;
+
+}
+#button2 {
+width:80%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(0,0,255,0.6);
+color:white;
+font-family:Courier new,monospace;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;}
+
+#button2:active {
+background-color:blue;
+}
+
+#login{
+width:80vw;
+height:;
+border-style:solid;
+border-color:green;
+border-width:1px;
+background-color:rgba(255,255,255,0.6);
+display:flex;
+margin: 8px auto;
+border-radius:10px;
+overflow:hidden;
+display:none;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+padding-bottom:35px;
+background-color:lightblue;
+padding-top:15px;
+margin-bottom:30px;
+
+}
+#legend2{
+color:red;
+font-family:Courier new,monospace;
+font-size:30px;
+font-weight:bold;
+}
+
+#button3 {
+width:80%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(255,0,0,0.6);
+color:white;
+font-family:Courier new,monospace;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+}
+#button3:active {
+background-color:red;
+
+}
+
+#button4{
+width:80%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(0,0,255,0.6);
+color:white;
+font-family:Courier new,monospace;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+}
+#button4:active {
+background-color:blue;
+
+}
+#message{
+width:80vw;
+height:120px;
+border-style:solid;
+border-color:green;
+border-width:2px;
+background-color:rgba(255,0,0,0.5);
+display:flex;
+margin: 8px auto;
+border-radius:10px;
+overflow:hidden;
+display:none;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+padding-bottom:;
+text-align:center;
+padding-top:;
+margin-bottom:30px;
+font-family:Courier new,monospace;
+font-size:30px;
+font-weight:bold;
+color:white;
+}
+
+#alert {
+color:blue;
+font-family:Courier new,monospace;
+font-size:30px;
+font-weight:bold;
+}
+
+#button5{
+width:80%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(0,0,255,0.6);
+color:white;
+font-family:Courier new,monospace;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;}
+
+#button5:active {
+background-color:red;
+}
+
+#delete{
+width:80vw;
+height:;
+border-style:solid;
+border-color:green;
+border-width:1px;
+background-color:rgba(255,255,255,0.6);
+display:flex;
+margin: 8px auto;
+border-radius:10px;
+overflow:hidden;
+display:none;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+padding-bottom:35px;
+background-color:lightblue;
+padding-top:15px;
+margin-bottom:30px;
+
+}
+#legend5{
+color:red;
+font-family:Courier new,monospace;
+font-size:30px;
+font-weight:bold;
+}
+
+#button6{
+width:80%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(255,0,0,0.6);
+color:white;
+font-family:Courier new,monospace;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+}
+#button6:active {
+background-color:red;
+
+}
+#button7{
+width:80%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(0,0,255,0.6);
+color:white;
+font-family:Courier new,monospace;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+}
+#button7:active {
+background-color:blue;
+
+}
+#button8{
+width:80%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(0,0,255,0.6);
+color:white;
+font-family:Courier new,monospace;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+}
+#button8:active {
+background-color:blue;
+
+}
+.input {
+text-transform:capitalize;
+
+
+}
+#forget{
+width:80vw;
+height:;
+border-style:solid;
+border-color:green;
+border-width:1px;
+background-color:rgba(255,255,255,0.6);
+display:flex;
+margin: 8px auto;
+border-radius:10px;
+overflow:hidden;
+display:none;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+padding-bottom:35px;
+background-color:lightblue;
+padding-top:15px;
+margin-bottom:30px;
+
+}
+#legend6{
+color:red;
+font-family:Courier new,monospace;
+font-size:30px;
+font-weight:bold;
+}
+#button9{
+width:80%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(255,0,0,0.6);
+color:white;
+font-family:Courier new,monospace;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+}
+#button9:active {
+background-color:red;
+
+}
+#button10{
+width:80%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(0,0,255,0.6);
+color:white;
+font-family:Courier new,monospace;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+}
+#button10:active {
+background-color:blue;
+
+}
+
+#table {
+display:none;
+justify-content:center;
+align-items:center;
+margin-bottom:30px;
+
+
+}
+
+
+#th1 {
+padding:5px 300px;
+background-color:red;
+color:white;
+height:30px;
+font-family:Courier new,monospace;
+font-size:25px;
+margin:auto;
+border-radius:10px;
+border:2px solid blue;
+}
+.tr1{
+
+}
+
+td{
+width:50%;
+background-color:;
+border:4px solid black;
+text-align:center;
+font-family:Courier new,monospace;
+height:25px;
+font-size:20px;
+font-weight:bold;
+
+}
+</style>
+</head>
+<body>
+	<div id="heading">
+		<div id="text">
+			<p>Calculate Your Reciept</p>
+		</div>		
+	</div>
+ 	
+	<fieldset id="signup">
+		<legend id="legend">	
+		 SignUp
+		</legend>	
+	     <input class="input" id="name" type="text" placeholder="Enter Your Name..." >	
+	     <input class="input" id="dob" type="text" placeholder="Enter Your DOB DD/MM/YYY ..." >	
+		 <input class="input"  id="mobile" type="number"  placeholder="Enter Your Mobile ..." >		
+		 <input class="input" id="email" type="email" placeholder="Enter Your Email..." >		
+		 <input class="input" id="password" type="text" placeholder="Create A Password..." >		
+		 <div class="input" id="button">SignUp...</div>	
+	     <div class="input" id="button2">Already Have An Account...</div>	
+	     <div class="input" id="button5">Delete Existing Account...</div>	
+	   
+	</fieldset>
+
+<fieldset id="login">
+		<legend id="legend2">	
+		 LogIn
+		</legend>	
+	   		
+		 <input class="input" id="lemail" type="email" placeholder="Enter Your Email..." >		
+		 <input class="input" id="lpassword" type="text" placeholder="Enter Your Password..." >		
+		 <div class="input" id="button3">LOGIN...</div>	
+		 <div class="input" id="button8">FORGOT PASSWORD...</div>	
+		 
+	     <div class="input" id="button4">SignUp...</div>	
+	     
+	</fieldset>
+	
+	
+<fieldset id="message">
+<legend id="alert">Alert</legend>
+<p id="alertp"></p>
+</fieldset>
+
+
+
+<fieldset id="delete">
+		<legend id="legend5">	
+		 Delete Account
+		</legend>	
+	   		
+		 <input class="input" id="demail" type="email" placeholder="Enter Your Email..." >		
+		 <input class="input" id="dpassword" type="text" placeholder="Enter Your Password..." >		
+		 <div class="input" id="button6"> Delete Account</div>	
+	    
+	     <div class="input" id="button7"> BACK...</div>	
+	     
+	</fieldset>
+	
+	
+	<fieldset id="forget">
+	<legend id="legend6">	
+	Forget Email Password
+	</legend>	
+	
+	<input class="input" id="dname" type="text" placeholder="Enter Your Name..." >		
+	<input class="input" id="dmobile" type="number" placeholder="Enter Your Mobile..." >		
+	<div class="input" id="button9">GET EMAIL AND PASSWORD...</div>	
+	
+	<div class="input" id="button10"> BACK...</div>	
+	
+	</fieldset>
+	<table id="table">
+	<th colspan="2" id="th1" >Your Details</th>
+	<tr class="tr1" ><td>EMAIL ID </td><td id="entname"></td><tr>
+	<t class="tr1" r><td>PASSWORD</td><td id="entpass"></td><tr>
+	</table>
+	
+<script type="text/javascript">
+/*
+var name = document.getElementById("nane").value;
+var dob = document.getElementById("dob").value;
+var mobile = document.getElementById("mobile").value;
+var email = document.getElementById("email").value;
+var password = document.getElementById("password").value;
+
+var lemail = document.getElementById("lemail").value;
+var lpassword = document.getElementById("lpassword").value;
+*/
+//localStorage.clear();
+document.getElementById("button").addEventListener("click",signup);
+function signup(){
+
+var name = document.getElementById("name").value;
+var dob = document.getElementById("dob").value;
+var mobile = document.getElementById("mobile").value;
+var email = document.getElementById("email").value;
+var password = document.getElementById("password").value;
+var localcheck1 = localStorage.getItem("email");
+var localcheck2 = localStorage.getItem("password");
+if(localcheck1 === null && localcheck2 === null){
+
+if(name !="" && dob != "" && mobile != "" && email != "" && password != ""){
+if(mobile.length == 10) {
+//var arry = [name,dob,mobile,email,password];
+localStorage.setItem("name",name);
+localStorage.setItem("dob",dob);
+localStorage.setItem("mobile",mobile);
+localStorage.setItem("email",email);
+localStorage.setItem("password",password);
+document.getElementById("name").value = "";
+document.getElementById("dob").value = "";
+document.getElementById("mobile").value = "";
+document.getElementById("email").value = "";
+document.getElementById("password").value = "";
+
+
+document.getElementById("login").style.display = "flex";
+document.getElementById("signup").style.display = "none";
+
+document.getElementById("message").style.display = "flex";
+document.getElementById("alertp").innerHTML = name + " You Have SingUp SucessFully. <br> Enter Email and Password To Login.";
+
+function times(){
+
+document.getElementById("message").style.display = "none";
+}
+setTimeout(times,10000);
+
+
+}else{alert("Enter a Valid Mobile Number... ");}
+
+}else{(alert("All Fields Are Required..."));}
+}else{
+alert("Already Have An Account In This Device. Firstly Delete That To Create New...");
+
+}
+}
+
+//button3 login Using email and password
+document.getElementById("button3").addEventListener("click",login);
+function login(){
+var lemail = document.getElementById("lemail").value;
+var lpassword = document.getElementById("lpassword").value;
+
+if(lemail != "" && lpassword != ""){
+var gemail = localStorage.getItem("email");
+var gpassword = localStorage.getItem("password");
+
+document.getElementById("lemail").value = "";
+document.getElementById("lpassword").value = "";
+
+
+if(lemail==gemail && lpassword==gpassword)
+{alert("1");
+//window.location.href = "";
+
+}
+else{alert("Email Or Password Is Wrong...");}
+}else{
+alert("Both Fields Are Required...")
+}
+}
+</script>
+
+<script type="text/javascript">
+//button2 Have An Account
+document.getElementById("button2").addEventListener("click",haveaccount);
+function haveaccount(){
+document.getElementById("login").style.display = "flex";
+document.getElementById("signup").style.display = "none";
+}
+//button 4 Not Have An Account
+document.getElementById("button4").addEventListener("click",nothaveaccount);
+function nothaveaccount(){
+document.getElementById("login").style.display = "none";
+document.getElementById("signup").style.display = "flex";
+}
+</script>
+
+<script type="text/javascript">
+
+document.getElementById("button5").addEventListener("click", duser);
+function duser(){
+document.getElementById("signup").style.display = "none";
+document.getElementById("delete").style.display = "flex";
+
+}
+
+//Back
+document.getElementById("button7").addEventListener("click", rback);
+function rback(){
+document.getElementById("signup").style.display = "flex";
+document.getElementById("delete").style.display = "none";
+}
+
+
+//delete account
+
+
+document.getElementById("button6").addEventListener("click",userdd);
+function userdd(){
+var demail = document.getElementById("demail").value;
+var dpassword = document.getElementById("dpassword").value;
+
+if(demail != "" && dpassword != ""){
+var femail = localStorage.getItem("email");
+var fpassword = localStorage.getItem("password");
+
+document.getElementById("demail").value = "";
+document.getElementById("dpassword").value = "";
+
+
+if(demail==femail && dpassword==fpassword)
+{
+var con = confirm("Do You Want To Delete Your Account?");
+if(con == true){
+localStorage.clear();
+alert("Your Account Is Deleted SucessFully...");
+}
+
+}
+else{alert("Email Or Password Is Wrong...");}
+}else{
+alert("Both Fields Are Required...")
+}
+}
+
+
+
+//forget pass
+document.getElementById("button8").addEventListener("click",forget);
+function forget(){
+document.getElementById("login").style.display = "none";
+document.getElementById("forget").style.display = "flex";
+}
+
+document.getElementById("button10").addEventListener("click",forget1);
+function forget1(){
+document.getElementById("login").style.display = "flex";
+document.getElementById("forget").style.display = "none";
+document.getElementById("table").style.display = "none";
+document.getElementById("entname").innerHTML = "";
+document.getElementById("entpass").innerHTML = "" ;
+
+}
+
+document.getElementById("button9").addEventListener("click",userget);
+function userget(){
+var dname = document.getElementById("dname").value;
+var dmobile = document.getElementById("dmobile").value;
+
+if(dname != "" && dmobile != ""){
+var xemail = localStorage.getItem("name");
+var xpassword = localStorage.getItem("mobile");
+
+document.getElementById("dname").value = "";
+document.getElementById("dmobile").value = "";
+
+
+if(dname==xemail && dmobile==xpassword)
+{
+document.getElementById("table").style.display = "flex";
+var xyz = localStorage.getItem("email");
+var xy= localStorage.getItem("password");
+
+
+document.getElementById("entname").innerHTML = xyz;
+document.getElementById("entpass").innerHTML = xy ;
+
+
+
+}
+else{alert("Name Or Mibile  Does Not Match...");}
+}else{
+alert("Both Fields Are Required...")
+}
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
